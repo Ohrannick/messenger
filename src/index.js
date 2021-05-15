@@ -1,11 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
+const messages = ["Привет", "React!", "Как дела?"]
+
 const Message = ({ message }) => {
   return (
     <React.Fragment>
       <h1>{message}</h1>
-      <p>ABCdef</p>
     </React.Fragment>
   )
 }
@@ -16,7 +17,26 @@ const MessageField = ({ messages }) => {
   ))
 }
 
-ReactDOM.render(
-  <MessageField messages={["test1"]} />,
-  document.getElementById("root"),
-)
+const ButtonAddText = () => {
+  return (
+    <button
+      className="add-text"
+      onClick={() => {
+        alert("Нормально")
+      }}
+    >
+      Press Me
+    </button>
+  )
+}
+
+const AllPage = () => {
+  return (
+    <div>
+      <MessageField messages={messages} />
+      <ButtonAddText />
+    </div>
+  )
+}
+
+ReactDOM.render(<AllPage />, document.getElementById("root"))
