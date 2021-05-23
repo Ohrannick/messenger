@@ -9,6 +9,12 @@ export class ChatList extends React.Component {
     selectedIndex: 0,
   }
 
+  handleListItemClick = (event, index) => {
+    this.setState({
+      selectedIndex: index,
+    })
+  }
+
   render() {
     const { chats, selectedIndex } = this.state
 

@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
+import styles from "./message.module.css"
 
 export class Message extends React.Component {
   static propTypes = {
@@ -16,6 +17,7 @@ export class Message extends React.Component {
 
     return (
       <div
+        className={styles.item}
         style={{
           alignSelf: author === "Bot" ? "flex-start" : "flex-end",
         }}
