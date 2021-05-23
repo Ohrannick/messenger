@@ -1,0 +1,12 @@
+.icon {
+  color: #2b5278;
+  cursor: pointer;
+}
+
+.message {
+  padding: 10px;
+  background-color: lightskyblue;
+  grid-area: message;
+  display: flex;
+  flex-direction: column;
+}

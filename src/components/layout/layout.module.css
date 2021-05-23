@@ -1,0 +1,9 @@
+.wrapper {
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 60px 100%;
+  grid-template-columns: 30% 70%;
+  grid-gap: 10px;
+  grid-template-areas: 'header header'
+    'chat message';
+}

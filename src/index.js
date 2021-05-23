@@ -1,12 +1,21 @@
+import { ThemeProvider, createMuiTheme } from "@material-ui/core"
 import React from "react"
 import ReactDOM from "react-dom"
-import MessageField from "./components/messagefield/messagefield"
+import { Layout } from "./components"
+import styles from "./index.module.css"
 
-const render = () => {
-  ReactDOM.render(
-    <MessageField messages={this.messages} />,
-    document.getElementById("root"),
-  )
+const App = () => {
+  // cделал Layout
+  return <Layout />
 }
 
-render()
+const theme = createMuiTheme({})
+
+ReactDOM.render(
+  <ThemeProvider theme={theme}>
+    <div>
+      <App />
+    </div>
+  </ThemeProvider>,
+  document.getElementById("root"),
+)
