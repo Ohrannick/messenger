@@ -1,42 +1,20 @@
+import { ThemeProvider, createMuiTheme } from "@material-ui/core"
 import React from "react"
 import ReactDOM from "react-dom"
+import { Layout } from "./components"
+// import styles from "./index.module.css"
 
-const messages = ["Привет", "React!", "Как дела?"]
-
-const Message = ({ message }) => {
-  return (
-    <React.Fragment>
-      <h1>{message}</h1>
-    </React.Fragment>
-  )
+const App = () => {
+  return <Layout />
 }
 
-const MessageField = ({ messages }) => {
-  return messages.map((message, index) => (
-    <Message message={message} key={index} isVisible={true} />
-  ))
-}
+const theme = createMuiTheme({})
 
-const ButtonAddText = () => {
-  return (
-    <button
-      className="add-text"
-      onClick={() => {
-        alert("Нормально")
-      }}
-    >
-      Press Me
-    </button>
-  )
-}
-
-const AllPage = () => {
-  return (
+ReactDOM.render(
+  <ThemeProvider theme={theme}>
     <div>
-      <MessageField messages={messages} />
-      <ButtonAddText />
+      <App />
     </div>
-  )
-}
-
-ReactDOM.render(<AllPage />, document.getElementById("root"))
+  </ThemeProvider>,
+  document.getElementById("root"),
+)
