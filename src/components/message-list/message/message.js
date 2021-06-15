@@ -32,7 +32,6 @@ export class Message extends React.Component {
             ":" +
             date.getSeconds()}
         </h3>
-        <hr />
       </div>
     )
   }

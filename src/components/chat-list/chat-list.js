@@ -5,7 +5,6 @@ import styles from "./chat-list.module.css"
 // @TODO сделать propTypes
 export class ChatList extends React.Component {
   state = {
-    chats: ["room1", "room2", "room3"],
     selectedIndex: 0,
   }
 

@@ -16,9 +16,6 @@ const StyleInput = withStyles(() => ({
 
 export class MessageList extends React.Component {
   state = {
-    messages: [
-      { author: "User", value: "Привет! Как дела?", date: new Date() },
-    ],
     value: "",
   }
 
